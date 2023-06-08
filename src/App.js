@@ -3,7 +3,7 @@ import PaymentValidation from "./components/PaymentValidation";
 
 function App() {
   return (
-    <div className="App bg-slate-200 dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl min-h-screen flex flex-col justify-between">
+    <div className="App bg-slate-300 dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl min-h-screen flex flex-col justify-between" >
       <header className='bg-slate-100 text-center'>
         <h1 className=' text-slate-900 dark:text-white text-2xl font-medium tracking-tight '>Credit Card Verifier App</h1>
       </header>
