@@ -10,8 +10,12 @@ export default function checkDetails ({ target }) {
         }
     }
     if (target.name === "cardName") {
-      console.log(target.value)
-        if ((/^[A-Za-z]+$/).test(target.value)) {
+        let cleanInput = target.value
+                                .split("")
+                                .map(name => name.trim())
+                                .join("")
+
+        if ((/^[A-Za-z]+$/).test(cleanInput)) {
           result = {...result, [target.name] : target.value}
         } else {
           result = {error : "Invalid Card Name"}
@@ -19,27 +23,20 @@ export default function checkDetails ({ target }) {
     }
   
 
-
     if (target.name === "cardDate") {
-      let [month, year] = target.value.slice(0,2)
-      console.log(month, year)
-      if (typeof [month, year] === "number") {
-        console.log(target.value)
+
+        const [year, month] = target.value.split("-")  
         const currentDate = new Date()
-        const currentYear = currentDate.getFullYear() % 100
+        const currentYear = currentDate.getFullYear() 
+        const currentMonth = currentDate.getMonth() 
         const nextThreeYears = currentYear + 3 
 
-        if (Number(month) <= 12 && Number(month) > 0) {
-          result = {...result, "month" : month}
-        } else if (Number(year) > currentYear && Number(year) < nextThreeYears) {
-          result = {...result, "year" : year}
+        if ((Number(year) < nextThreeYears && Number(year) > currentYear) || (Number(year) === currentYear && Number(month) > currentMonth && Number(year) < nextThreeYears))  {
+          result = {...result, "month" : month, "year" : year}
         } else {
           result = {error : "Invalid Date"}
         }
 
-      } else {
-        result = {error : "Invalid Date"}
-      }
     }
 
     if (target.name === "cardCVV") {
