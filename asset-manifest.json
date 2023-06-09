@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ValeGottardello/creditCardValidation/static/css/main.89d2e6dc.css",
+    "main.js": "/ValeGottardello/creditCardValidation/static/js/main.0ace0d38.js",
+    "static/js/787.28cb0dcd.chunk.js": "/ValeGottardello/creditCardValidation/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/ValeGottardello/creditCardValidation/index.html",
+    "main.89d2e6dc.css.map": "/ValeGottardello/creditCardValidation/static/css/main.89d2e6dc.css.map",
+    "main.0ace0d38.js.map": "/ValeGottardello/creditCardValidation/static/js/main.0ace0d38.js.map",
+    "787.28cb0dcd.chunk.js.map": "/ValeGottardello/creditCardValidation/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.89d2e6dc.css",
+    "static/js/main.0ace0d38.js"
+  ]
+}
